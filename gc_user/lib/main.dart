@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gc_user/ui/screens/auth/login_screen.dart';
+import 'package:gc_user/ui/screens/auth/email_scren.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +23,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: AuthLoginScreen());
+    return const Scaffold(body: EmailOtpScreen());
   }
 }

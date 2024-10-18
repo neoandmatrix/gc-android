@@ -12,12 +12,21 @@ class AuthLoginScreen extends StatefulWidget {
 }
 
 class _AuthLoginScreenState extends State<AuthLoginScreen> {
-  late final TextEditingController _emailTextEditingCOntroller;
+  late final TextEditingController _emailTextEditingController;
+  late final TextEditingController _passwordTextEditingController;
 
   @override
   void initState() {
     super.initState();
-    _emailTextEditingCOntroller = TextEditingController();
+    _emailTextEditingController = TextEditingController();
+    _passwordTextEditingController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _emailTextEditingController.dispose();
+    _passwordTextEditingController.dispose();
   }
 
   @override
@@ -35,13 +44,22 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
             left: AppComponestsSizes(context)
                 .runningDeviceDimensionAdjustedWidth(27.0),
             top: AppComponestsSizes(context)
-                .runningDeviceDimensionAdjustedHeight(114.2),
+                .runningDeviceDimensionAdjustedHeight(50.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-              
+                const SizedBox(
+                  child: Icon(
+                    Icons.arrow_back,
+                    color: Colors.white,
+                    size: 25,
+                  ),
+                ),
+                SizedBox(
+                    height: AppComponestsSizes(context)
+                        .runningDeviceDimensionAdjustedHeight(50.0)),
                 const SizedBox(
                   child: Text(
                     'LOG IN',
@@ -74,7 +92,7 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
                 AuthTextField(
                     hintText: 'Email',
                     icon: Icons.alternate_email_rounded,
-                    controller: _emailTextEditingCOntroller,
+                    controller: _emailTextEditingController,
                     obsecureText: false),
                 SizedBox(
                   height: AppComponestsSizes(context)
@@ -83,7 +101,7 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
                 AuthTextField(
                     hintText: 'Password',
                     icon: Icons.key,
-                    controller: _emailTextEditingCOntroller,
+                    controller: _passwordTextEditingController,
                     obsecureText: false),
                 SizedBox(
                   height: AppComponestsSizes(context)

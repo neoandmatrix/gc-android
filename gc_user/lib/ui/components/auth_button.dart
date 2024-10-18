@@ -3,10 +3,10 @@ import 'package:gc_user/core/style/colors.dart';
 import 'package:gc_user/core/style/sizes.dart';
 import 'package:gc_user/core/style/typography.dart';
 
-class CustomAuthButton extends StatelessWidget {
+class AuthButton extends StatelessWidget {
   final bool isDisabled;
   final String buttonText;
-  const CustomAuthButton({
+  const AuthButton({
     super.key,
     required this.buttonText,
     required this.isDisabled,

@@ -41,9 +41,10 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+              
                 const SizedBox(
                   child: Text(
-                    'LOGIN',
+                    'LOG IN',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 35,
@@ -70,7 +71,7 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
                   height: AppComponestsSizes(context)
                       .runningDeviceDimensionAdjustedHeight(53.0),
                 ),
-                CustomAuthTextField(
+                AuthTextField(
                     hintText: 'Email',
                     icon: Icons.alternate_email_rounded,
                     controller: _emailTextEditingCOntroller,
@@ -79,7 +80,7 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
                   height: AppComponestsSizes(context)
                       .runningDeviceDimensionAdjustedHeight(11.76),
                 ),
-                CustomAuthTextField(
+                AuthTextField(
                     hintText: 'Password',
                     icon: Icons.key,
                     controller: _emailTextEditingCOntroller,
@@ -88,7 +89,7 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
                   height: AppComponestsSizes(context)
                       .runningDeviceDimensionAdjustedHeight(11.76),
                 ),
-                const CustomAuthButton(buttonText: 'LOG IN', isDisabled: true),
+                const AuthButton(buttonText: 'LOG IN', isDisabled: true),
               ],
             ),
           ),

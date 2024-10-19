@@ -35,7 +35,7 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
       height:
           AppComponestsSizes(context).runningDeviceDimensionAdjustedHeight(716),
       clipBehavior: Clip.antiAlias,
-      decoration: const BoxDecoration(color: AppColors.authPagebackgroundColor),
+      decoration: const BoxDecoration(color: AppColors.primaryBackgroundColor),
       child: Stack(
         children: [
           Positioned(
@@ -98,7 +98,7 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
                     const DisplayText(
                       text: 'Log in',
                       fontSize: 15,
-                      textColor: AppColors.authButtonEnabledBackgroundColor,
+                      textColor: AppColors.buttonPrimaryColor,
                     )
                   ],
                 ),

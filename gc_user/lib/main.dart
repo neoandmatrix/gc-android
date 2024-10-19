@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gc_user/ui/screens/auth/email_scren.dart';
 import 'package:gc_user/ui/screens/auth/otp_screen.dart';
 
 void main() {

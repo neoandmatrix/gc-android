@@ -24,12 +24,12 @@ class AuthTextField extends StatelessWidget {
       decoration: InputDecoration(
         prefixIcon: Icon(
           icon,
-          color: AppColors.authFieldsForegroundColor,
+          color: AppColors.inputFieldPrimaryColor,
         ),
         hintText: hintText,
         filled: true,
-        fillColor: AppColors.authFieldsBackgroundColor,
-        hintStyle: AppTypography.authFieldTextStyle,
+        fillColor: AppColors.inputFieldSecondaryColor,
+        hintStyle: AppTypography.inputFieldPrimaryTextStyle,
         constraints: BoxConstraints(
           maxWidth: AppComponestsSizes(context)
               .runningDeviceDimensionAdjustedWidth(305),

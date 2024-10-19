@@ -38,7 +38,7 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
       height:
           AppComponestsSizes(context).runningDeviceDimensionAdjustedHeight(716),
       clipBehavior: Clip.antiAlias,
-      decoration: const BoxDecoration(color: AppColors.authPagebackgroundColor),
+      decoration: const BoxDecoration(color: AppColors.primaryBackgroundColor),
       child: Stack(
         children: [
           Positioned(
@@ -71,7 +71,7 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
                   child: DisplayText(
                     text: 'Enter your email address \nto sign in',
                     fontSize: 23,
-                    textColor: AppColors.authFieldsForegroundColor,
+                    textColor: AppColors.inputFieldPrimaryColor,
                   ),
                 ),
                 SizedBox(
@@ -130,7 +130,7 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
                   child: DisplayText(
                     text: 'Sign up',
                     fontSize: 23,
-                    textColor: AppColors.authButtonEnabledBackgroundColor,
+                    textColor: AppColors.buttonPrimaryColor,
                   ),
                 ),
               ],

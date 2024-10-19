@@ -22,10 +22,10 @@ class AuthButton extends StatelessWidget {
                 .runningDeviceDimensionAdjustedWidth(303),
             AppComponestsSizes(context)
                 .runningDeviceDimensionAdjustedHeight(43.6)),
-        foregroundColor: AppColors.authButtonForegroundColor,
+        foregroundColor: AppColors.buttonTextPrimaryColor,
         backgroundColor: isDisabled
-            ? AppColors.authButtonDisabledBackgroundColor
-            : AppColors.authButtonEnabledBackgroundColor,
+            ? AppColors.buttonSecondaryColor
+            : AppColors.buttonPrimaryColor,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(15),
@@ -34,7 +34,7 @@ class AuthButton extends StatelessWidget {
       ),
       child: Text(
         buttonText,
-        style: AppTypography.authButtonTextStyle,
+        style: AppTypography.buttonPrimaryTextStyle,
       ),
     );
   }

@@ -11,7 +11,7 @@ class OtpField extends StatefulWidget {
 
 class _OtpFieldState extends State<OtpField> {
   late List<TextEditingController?> controls;
-  
+
   bool clearText = false;
 
   @override
@@ -19,8 +19,8 @@ class _OtpFieldState extends State<OtpField> {
     return OtpTextField(
       numberOfFields: 6,
       filled: true,
-      fillColor: AppColors.authFieldsBackgroundColor,
-      focusedBorderColor: AppColors.authFieldsBackgroundColor,
+      fillColor: AppColors.inputFieldSecondaryColor,
+      focusedBorderColor: AppColors.inputFieldSecondaryColor,
       borderWidth: 1.0,
       clearText: clearText,
       showFieldAsBox: true,

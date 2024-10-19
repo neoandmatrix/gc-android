@@ -11,11 +11,11 @@ class AppTypography {
 
   static const TextStyle button = TextStyle();
 
-  static TextStyle authButtonTextStyle =
+  static TextStyle buttonPrimaryTextStyle =
       GoogleFonts.leagueSpartan(fontSize: 20);
 
-  static TextStyle authFieldTextStyle = GoogleFonts.leagueSpartan(
+  static TextStyle inputFieldPrimaryTextStyle = GoogleFonts.leagueSpartan(
     fontSize: 20,
-    color: AppColors.authFieldsForegroundColor,
+    color: AppColors.inputFieldPrimaryColor,
   );
 }

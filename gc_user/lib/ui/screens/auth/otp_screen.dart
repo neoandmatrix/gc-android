@@ -13,7 +13,6 @@ class EnterOtpScreen extends StatefulWidget {
 }
 
 class _EnterOtpScreenState extends State<EnterOtpScreen> {
-  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,7 +21,7 @@ class _EnterOtpScreenState extends State<EnterOtpScreen> {
       height:
           AppComponestsSizes(context).runningDeviceDimensionAdjustedHeight(716),
       clipBehavior: Clip.antiAlias,
-      decoration: const BoxDecoration(color: AppColors.authPagebackgroundColor),
+      decoration: const BoxDecoration(color: AppColors.primaryBackgroundColor),
       child: Stack(
         children: [
           Positioned(
@@ -56,7 +55,7 @@ class _EnterOtpScreenState extends State<EnterOtpScreen> {
                     child: DisplayText(
                   text: 'abcd@gmail.com',
                   fontSize: 38,
-                  textColor: AppColors.authButtonEnabledBackgroundColor,
+                  textColor: AppColors.buttonPrimaryColor,
                 )),
                 SizedBox(
                   height: AppComponestsSizes(context)
@@ -68,7 +67,7 @@ class _EnterOtpScreenState extends State<EnterOtpScreen> {
                     DisplayText(
                       text: ' OTP ',
                       fontSize: 28,
-                      textColor: AppColors.authButtonEnabledBackgroundColor,
+                      textColor: AppColors.buttonPrimaryColor,
                     ),
                     DisplayText(text: 'sent to your', fontSize: 28)
                   ],
@@ -98,7 +97,7 @@ class _EnterOtpScreenState extends State<EnterOtpScreen> {
                     const DisplayText(
                       text: 'Resend OTP',
                       fontSize: 18,
-                      textColor: AppColors.authButtonEnabledBackgroundColor,
+                      textColor: AppColors.buttonPrimaryColor,
                     )
                   ],
                 ),

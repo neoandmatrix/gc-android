@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gc_user/core/style/colors.dart';
 import 'package:gc_user/core/style/sizes.dart';
-import 'package:gc_user/ui/components/auth_button.dart';
-import 'package:gc_user/ui/components/auth_text_field.dart';
+import 'package:gc_user/ui/components/auth/auth_button.dart';
+import 'package:gc_user/ui/components/auth/auth_text_field.dart';
 
 class EmailOtpScreen extends StatefulWidget {
   const EmailOtpScreen({super.key});
@@ -13,20 +13,17 @@ class EmailOtpScreen extends StatefulWidget {
 
 class _EmailOtpScreenState extends State<EmailOtpScreen> {
   late final TextEditingController _emailTextEditingController;
-  late final TextEditingController _passwordTextEditingController;
 
   @override
   void initState() {
     super.initState();
     _emailTextEditingController = TextEditingController();
-    _passwordTextEditingController = TextEditingController();
   }
 
   @override
   void dispose() {
     super.dispose();
     _emailTextEditingController.dispose();
-    _passwordTextEditingController.dispose();
   }
 
   @override
@@ -115,27 +112,28 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
                 ),
                 Row(
                   children: [
-                     const Text(
-                        'Already have an account',
-                        style: TextStyle(
-                          color: Color(0xFFE0E0E0),
-                          fontSize: 15,
-                          fontFamily: 'League Spartan',
-                          fontWeight: FontWeight.w400,
-                        ),
+                    const Text(
+                      'Already have an account',
+                      style: TextStyle(
+                        color: Color(0xFFE0E0E0),
+                        fontSize: 15,
+                        fontFamily: 'League Spartan',
+                        fontWeight: FontWeight.w400,
                       ),
-                      SizedBox(
-                        width: AppComponestsSizes(context).runningDeviceDimensionAdjustedWidth(90),
+                    ),
+                    SizedBox(
+                      width: AppComponestsSizes(context)
+                          .runningDeviceDimensionAdjustedWidth(90),
+                    ),
+                    const Text(
+                      'Log in',
+                      style: TextStyle(
+                        color: Color(0xFFA7FF37),
+                        fontSize: 15,
+                        fontFamily: 'League Spartan',
+                        fontWeight: FontWeight.w400,
                       ),
-                     const Text(
-                        'Log in',
-                        style: TextStyle(
-                          color: Color(0xFFA7FF37),
-                          fontSize: 15,
-                          fontFamily: 'League Spartan',
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
+                    ),
                   ],
                 ),
                 SizedBox(

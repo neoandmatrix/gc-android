@@ -3,6 +3,7 @@ import 'package:gc_user/core/style/colors.dart';
 import 'package:gc_user/core/style/sizes.dart';
 import 'package:gc_user/ui/components/auth/auth_button.dart';
 import 'package:gc_user/ui/components/auth/auth_text_field.dart';
+import 'package:gc_user/ui/components/auth/display_text.dart';
 
 class AuthLoginScreen extends StatefulWidget {
   const AuthLoginScreen({super.key});
@@ -61,28 +62,16 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
                     height: AppComponestsSizes(context)
                         .runningDeviceDimensionAdjustedHeight(50.0)),
                 const SizedBox(
-                  child: Text(
-                    'LOG IN',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 35,
-                      fontFamily: 'League Spartan',
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
+                  child: DisplayText(text: 'LOG IN', fontSize: 38),
                 ),
                 SizedBox(
                     height: AppComponestsSizes(context)
                         .runningDeviceDimensionAdjustedHeight(25.2)),
                 const SizedBox(
-                  child: Text(
-                    'Enter your email address \nto sign in',
-                    style: TextStyle(
-                      color: Color(0xFFE0E0E0),
-                      fontSize: 20,
-                      fontFamily: 'League Spartan',
-                      fontWeight: FontWeight.w400,
-                    ),
+                  child: DisplayText(
+                    text: 'Enter your email address \nto sign in',
+                    fontSize: 23,
+                    textColor: AppColors.authFieldsForegroundColor,
                   ),
                 ),
                 SizedBox(
@@ -134,25 +123,14 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
             child: const Column(
               children: [
                 SizedBox(
-                  child: Text(
-                    'Don\'t have an account ?',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 25,
-                      fontFamily: 'League Spartan',
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
+                  child: DisplayText(
+                      text: 'Don\'t have an account?', fontSize: 28),
                 ),
                 SizedBox(
-                  child: Text(
-                    'Sign Up',
-                    style: TextStyle(
-                      color: Color(0xFFA7FF37),
-                      fontSize: 20,
-                      fontFamily: 'League Spartan',
-                      fontWeight: FontWeight.w400,
-                    ),
+                  child: DisplayText(
+                    text: 'Sign up',
+                    fontSize: 23,
+                    textColor: AppColors.authButtonEnabledBackgroundColor,
                   ),
                 ),
               ],

@@ -3,6 +3,7 @@ import 'package:gc_user/core/style/colors.dart';
 import 'package:gc_user/core/style/sizes.dart';
 import 'package:gc_user/ui/components/auth/auth_button.dart';
 import 'package:gc_user/ui/components/auth/auth_text_field.dart';
+import 'package:gc_user/ui/components/auth/display_text.dart';
 
 class EmailOtpScreen extends StatefulWidget {
   const EmailOtpScreen({super.key});
@@ -58,44 +59,20 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
                     height: AppComponestsSizes(context)
                         .runningDeviceDimensionAdjustedHeight(50.0)),
                 const SizedBox(
-                  child: Text(
-                    'Register with your',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontFamily: 'League Spartan',
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
+                  child: DisplayText(text: 'Register with your', fontSize: 23),
                 ),
                 SizedBox(
                     height: AppComponestsSizes(context)
                         .runningDeviceDimensionAdjustedHeight(5.0)),
                 const SizedBox(
-                  child: Text(
-                    'Email Address',
-                    style: TextStyle(
-                      color: Color(0xFFE0E0E0),
-                      fontSize: 30,
-                      fontFamily: 'League Spartan',
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
+                  child: DisplayText(text: 'Email Address', fontSize: 33),
                 ),
                 SizedBox(
                   height: AppComponestsSizes(context)
                       .runningDeviceDimensionAdjustedHeight(5.0),
                 ),
                 const SizedBox(
-                  child: Text(
-                    'to continue',
-                    style: TextStyle(
-                      color: Color(0xFFE0E0E0),
-                      fontSize: 20,
-                      fontFamily: 'League Spartan',
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
+                  child: DisplayText(text: 'to continue', fontSize: 23),
                 ),
                 SizedBox(
                   height: AppComponestsSizes(context)
@@ -112,28 +89,17 @@ class _EmailOtpScreenState extends State<EmailOtpScreen> {
                 ),
                 Row(
                   children: [
-                    const Text(
-                      'Already have an account',
-                      style: TextStyle(
-                        color: Color(0xFFE0E0E0),
-                        fontSize: 15,
-                        fontFamily: 'League Spartan',
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
+                    const DisplayText(
+                        text: 'Already have an account', fontSize: 18),
                     SizedBox(
                       width: AppComponestsSizes(context)
                           .runningDeviceDimensionAdjustedWidth(90),
                     ),
-                    const Text(
-                      'Log in',
-                      style: TextStyle(
-                        color: Color(0xFFA7FF37),
-                        fontSize: 15,
-                        fontFamily: 'League Spartan',
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
+                    const DisplayText(
+                      text: 'Log in',
+                      fontSize: 15,
+                      textColor: AppColors.authButtonEnabledBackgroundColor,
+                    )
                   ],
                 ),
                 SizedBox(

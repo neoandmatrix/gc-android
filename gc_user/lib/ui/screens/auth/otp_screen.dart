@@ -3,6 +3,7 @@ import 'package:gc_user/core/style/colors.dart';
 import 'package:gc_user/core/style/sizes.dart';
 import 'package:gc_user/ui/components/auth/auth_button.dart';
 import 'package:gc_user/ui/components/auth/auth_otp.dart';
+import 'package:gc_user/ui/components/auth/display_text.dart';
 
 class EnterOtpScreen extends StatefulWidget {
   const EnterOtpScreen({super.key});
@@ -12,23 +13,7 @@ class EnterOtpScreen extends StatefulWidget {
 }
 
 class _EnterOtpScreenState extends State<EnterOtpScreen> {
-  late final TextEditingController _emailTextEditingController;
-  late final TextEditingController _passwordTextEditingController;
-
-  @override
-  void initState() {
-    super.initState();
-    _emailTextEditingController = TextEditingController();
-    _passwordTextEditingController = TextEditingController();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _emailTextEditingController.dispose();
-    _passwordTextEditingController.dispose();
-  }
-
+  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -61,83 +46,42 @@ class _EnterOtpScreenState extends State<EnterOtpScreen> {
                     height: AppComponestsSizes(context)
                         .runningDeviceDimensionAdjustedHeight(50.0)),
                 const SizedBox(
-                  child: Text(
-                    'Your entered email address is',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontFamily: 'League Spartan',
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
+                  child: DisplayText(
+                      text: 'Your entered email address is', fontSize: 23),
                 ),
                 SizedBox(
                     height: AppComponestsSizes(context)
-                        .runningDeviceDimensionAdjustedHeight(5.0)),
+                        .runningDeviceDimensionAdjustedHeight(4.0)),
                 const SizedBox(
-                  child: Text(
-                    'abcd@gmail.com',
-                    style: TextStyle(
-                      color: Color(0xFFA7FF37),
-                      fontSize: 30,
-                      fontFamily: 'League Spartan',
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ),
+                    child: DisplayText(
+                  text: 'abcd@gmail.com',
+                  fontSize: 38,
+                  textColor: AppColors.authButtonEnabledBackgroundColor,
+                )),
                 SizedBox(
                   height: AppComponestsSizes(context)
-                      .runningDeviceDimensionAdjustedHeight(5.0),
+                      .runningDeviceDimensionAdjustedHeight(4.0),
                 ),
                 const Row(
                   children: [
-                    Text(
-                      'Enter the',
-                      style: TextStyle(
-                        color: Color(0xFFFFFFFF),
-                        fontSize: 25,
-                        fontFamily: 'League Spartan',
-                        fontWeight: FontWeight.w400,
-                      ),
+                    DisplayText(text: 'Enter the', fontSize: 28),
+                    DisplayText(
+                      text: ' OTP ',
+                      fontSize: 28,
+                      textColor: AppColors.authButtonEnabledBackgroundColor,
                     ),
-                    Text(
-                      ' OTP ',
-                      style: TextStyle(
-                        color: Color(0xFFA7FF37),
-                        fontSize: 25,
-                        fontFamily: 'League Spartan',
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    Text(
-                      'sent to your',
-                      style: TextStyle(
-                        color: Color(0xFFFFFFFF),
-                        fontSize: 25,
-                        fontFamily: 'League Spartan',
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
+                    DisplayText(text: 'sent to your', fontSize: 28)
                   ],
                 ),
                 SizedBox(
                   height: AppComponestsSizes(context)
-                      .runningDeviceDimensionAdjustedHeight(3.0),
+                      .runningDeviceDimensionAdjustedHeight(2.0),
                 ),
-                const Text(
-                      'email address',
-                      style: TextStyle(
-                        color: Color(0xFFFFFFFF),
-                        fontSize: 25,
-                        fontFamily: 'League Spartan',
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
+                const DisplayText(text: 'email address', fontSize: 28),
                 SizedBox(
                   height: AppComponestsSizes(context)
                       .runningDeviceDimensionAdjustedHeight(53.0),
                 ),
-                
                 const OtpField(),
                 SizedBox(
                   height: AppComponestsSizes(context)
@@ -145,28 +89,17 @@ class _EnterOtpScreenState extends State<EnterOtpScreen> {
                 ),
                 Row(
                   children: [
-                    const Text(
-                      'OTP will expire in 00:30',
-                      style: TextStyle(
-                        color: Color(0xFFE0E0E0),
-                        fontSize: 15,
-                        fontFamily: 'League Spartan',
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
+                    const DisplayText(
+                        text: 'OTP will expire in 00:30', fontSize: 18),
                     SizedBox(
                       width: AppComponestsSizes(context)
-                          .runningDeviceDimensionAdjustedWidth(55),
+                          .runningDeviceDimensionAdjustedWidth(30),
                     ),
-                    const Text(
-                      'Resend OTP',
-                      style: TextStyle(
-                        color: Color(0xFFA7FF37),
-                        fontSize: 15,
-                        fontFamily: 'League Spartan',
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
+                    const DisplayText(
+                      text: 'Resend OTP',
+                      fontSize: 18,
+                      textColor: AppColors.authButtonEnabledBackgroundColor,
+                    )
                   ],
                 ),
                 SizedBox(

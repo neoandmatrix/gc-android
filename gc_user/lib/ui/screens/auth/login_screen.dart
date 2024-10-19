@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gc_user/core/style/colors.dart';
 import 'package:gc_user/core/style/sizes.dart';
-import 'package:gc_user/ui/components/auth_button.dart';
-import 'package:gc_user/ui/components/auth_text_field.dart';
+import 'package:gc_user/ui/components/auth/auth_button.dart';
+import 'package:gc_user/ui/components/auth/auth_text_field.dart';
 
 class AuthLoginScreen extends StatefulWidget {
   const AuthLoginScreen({super.key});

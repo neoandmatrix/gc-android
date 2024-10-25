@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gc_user/ui/screens/auth/create_password.dart';
-import 'package:gc_user/ui/screens/auth/otp_screen.dart';
+import 'package:gc_user/ui/screens/auth/create_account_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,6 +23,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: CreatePasswordScreen());
+    return const Scaffold(body: CreateAccountScreen());
   }
 }

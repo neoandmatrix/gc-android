@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gc_user/core/style/colors.dart';
 import 'package:gc_user/core/style/sizes.dart';
 import 'package:gc_user/core/style/typography.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AuthTextField extends StatelessWidget {
   final String hintText;
@@ -19,6 +20,7 @@ class AuthTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      style: GoogleFonts.leagueSpartan(color: Colors.white,fontSize: 20),
       obscureText: obsecureText,
       controller: controller,
       decoration: InputDecoration(

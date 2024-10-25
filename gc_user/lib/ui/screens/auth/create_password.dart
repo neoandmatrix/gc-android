@@ -68,7 +68,8 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                     height: AppComponestsSizes(context)
                         .runningDeviceDimensionAdjustedHeight(25.0)),
                 SizedBox(
-                  width: AppComponestsSizes(context).runningDeviceDimensionAdjustedWidth(250),
+                  width: AppComponestsSizes(context)
+                      .runningDeviceDimensionAdjustedWidth(250),
                   child: const DisplayText(
                       text:
                           'The password must consists a letter, digit and a special character.',

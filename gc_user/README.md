@@ -1,16 +1,34 @@
 # gc_user
 
-A new Flutter project.
+## This app follows the clean architecture as recomended by flutter bloc package
 
-## Getting Started
+### The main folder structure is as follows
 
-This project is a starting point for a Flutter application.
+```
 
-A few resources to get you started if this is your first Flutter project:
+└── lib
+    ├── core
+    │   ├── types
+    │   ├── constants
+    │   ├── error
+    │   ├── style
+    │   └── theme
+    │
+    ├── data
+    │   ├── datsources (local or remote sources from where we get data)
+    │   ├── models ( structures )
+    │   └── repositories (implementaion of ones in domain layer)
+    │ 
+    ├── domain
+    │   ├── repositories ( abstract classes that define the contract )
+    │   ├── enteties (data types)
+    │   └── usescases ( each event or interaction of user with app is a usecase ex- signup,login )
+    │
+    ├── ui -> this is presentation layer
+    │   ├── bloc ( state management )
+    │   ├── components ( reusable components )
+    │   └── screens ( visible screens )
+    │
+    └── main.dart  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```     
